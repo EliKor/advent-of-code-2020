@@ -325,6 +325,7 @@ void part2(vector<string> grid) {
     while (prev_occupied != curr_occupied) {
         prev_occupied = curr_occupied;
         curr_occupied = simulate_round2(grid);
+        cout <<  "curr: " << curr_occupied << endl;
     }
     cout << "Occupied seats: " << curr_occupied << endl;
 }
@@ -335,7 +336,7 @@ int main() {
     while (cin >> s) {
         grid.push_back(s);
     }
-    part1(grid);
+    //part1(grid);
     part2(grid);
     return 0;
 }
